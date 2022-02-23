@@ -18,8 +18,10 @@ public class MyHashMapTest {
             }
             myHashMap.add(word, value);
         }
-        int frequency = myHashMap.get("paranoid");
+        myHashMap.remove("avoidable");
         System.out.println(myHashMap);
+        int frequency = myHashMap.get("paranoid");
+        System.out.println("Frequency of paranoid is: "+frequency);
         Assert.assertEquals( 3,frequency );
     }
 }
