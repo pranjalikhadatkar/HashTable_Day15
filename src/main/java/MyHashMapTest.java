@@ -1,12 +1,11 @@
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 public class MyHashMapTest {
 
     @Test
     public void givenASentence_WhenWordsAreAddedToListShouldReturnWordFrequency(){
-        String sentence = "To be or not to be" ;
+        String sentence = "“Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situation ";
         MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
         String[] words = sentence.toLowerCase().split( " ");
         for (String word : words) {
@@ -19,8 +18,8 @@ public class MyHashMapTest {
             }
             myHashMap.add(word, value);
         }
-        int frequency = myHashMap.get("to");
+        int frequency = myHashMap.get("paranoid");
         System.out.println(myHashMap);
-      //  Assert.assertEquals(expected:2, frequency );
+        Assert.assertEquals( 3,frequency );
     }
 }
